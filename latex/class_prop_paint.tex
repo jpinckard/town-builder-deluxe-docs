@@ -1,0 +1,129 @@
+\doxysection{Prop\+Paint Class Reference}
+\hypertarget{class_prop_paint}{}\label{class_prop_paint}\index{PropPaint@{PropPaint}}
+
+
+Changes the material of a prop based on index and the selected material. Each desired surface you want to apply the material to should have a collider, assigned in \doxylink{struct_prop_paint_1_1_paintable_index}{Paintable\+Index}. You should only have, at most, one entry in \textquotesingle{}\doxylink{struct_prop_paint_1_1_paintable}{Paintable}\textquotesingle{} for each paint type.  
+
+
+Inheritance diagram for Prop\+Paint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_prop_paint}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}}
+\begin{DoxyCompactList}\small\item\em A material and the type of paintables it can be applied to. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_prop_paint_1_1_paintable}{Paintable}}
+\begin{DoxyCompactList}\small\item\em A \doxylink{struct_prop_paint_1_1_paintable}{Paintable} is the definition of a collection of one or more Mesh Renderers and the way that that Mesh Renderer can be "{}painted"{}, i.\+e., have its material changed. For instance, it could be of type WALL, which would only allow wallpaper, or type FURNITURE, which could be used to paint -\/ for example -\/ the seat of a chair. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_prop_paint_1_1_paintable_index}{Paintable\+Index}}
+\begin{DoxyCompactList}\small\item\em A mesh renderer and the index on that renderer that is to be painted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_prop_paint_ab1df303d853cf5773be48f348f7db13c}{Paintable\+Category}} \{ {\bfseries WALL}
+, {\bfseries FLOOR}
+, {\bfseries FURNITURE}
+, \mbox{\hyperlink{class_prop_paint_ab1df303d853cf5773be48f348f7db13ca8e1bde3c3d303163521522cf1d62f21f}{ANY}}
+ \}
+\begin{DoxyCompactList}\small\item\em All possible types of Paintables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_prop_paint_a149a87df74eb92c0a179b82ec1dbde73}{Paint\+Prop}} (\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}} paint)
+\begin{DoxyCompactList}\small\item\em Executes the main paint logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_paint_aada1c472f6c81077fbd1f953f6526586}{Paint\+This\+Prop}} (\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}} paint)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_prop_paint_1_1_paint}{Paint} the attached \doxylink{class_prop}{Prop} with its paints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_paint_a6cbb368d33a8ee3d87f29b2a54d13045}\label{class_prop_paint_a6cbb368d33a8ee3d87f29b2a54d13045} 
+static bool {\bfseries Paint\+All\+Check} (\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}} paint)
+\item 
+static void \mbox{\hyperlink{class_prop_paint_a693ed16c8cd4da275a94bf33deb90ecb}{Paint\+All\+In\+Category}} (\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}} paint)
+\begin{DoxyCompactList}\small\item\em Paints all props of a given paintable category in the current scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_paint_af250b8864b26ca4dbbaa8e5629d03bb7}\label{class_prop_paint_af250b8864b26ca4dbbaa8e5629d03bb7} 
+List$<$ \mbox{\hyperlink{struct_prop_paint_1_1_paintable}{Paintable}} $>$ {\bfseries paintables} = new List$<$\mbox{\hyperlink{struct_prop_paint_1_1_paintable}{Paintable}}$>$()
+\begin{DoxyCompactList}\small\item\em List of material types and their associated mesh renderer indexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Changes the material of a prop based on index and the selected material. Each desired surface you want to apply the material to should have a collider, assigned in \doxylink{struct_prop_paint_1_1_paintable_index}{Paintable\+Index}. You should only have, at most, one entry in \textquotesingle{}\doxylink{struct_prop_paint_1_1_paintable}{Paintable}\textquotesingle{} for each paint type. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_prop_paint_ab1df303d853cf5773be48f348f7db13c}\index{PropPaint@{PropPaint}!PaintableCategory@{PaintableCategory}}
+\index{PaintableCategory@{PaintableCategory}!PropPaint@{PropPaint}}
+\doxysubsubsection{\texorpdfstring{PaintableCategory}{PaintableCategory}}
+{\footnotesize\ttfamily \label{class_prop_paint_ab1df303d853cf5773be48f348f7db13c} 
+enum \mbox{\hyperlink{class_prop_paint_ab1df303d853cf5773be48f348f7db13c}{Prop\+Paint.\+Paintable\+Category}}}
+
+
+
+All possible types of Paintables. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANY@{ANY}!PropPaint@{PropPaint}}\index{PropPaint@{PropPaint}!ANY@{ANY}}}\Hypertarget{class_prop_paint_ab1df303d853cf5773be48f348f7db13ca8e1bde3c3d303163521522cf1d62f21f}\label{class_prop_paint_ab1df303d853cf5773be48f348f7db13ca8e1bde3c3d303163521522cf1d62f21f} 
+ANY&Can be used for any purpose. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prop_paint_a693ed16c8cd4da275a94bf33deb90ecb}\index{PropPaint@{PropPaint}!PaintAllInCategory@{PaintAllInCategory}}
+\index{PaintAllInCategory@{PaintAllInCategory}!PropPaint@{PropPaint}}
+\doxysubsubsection{\texorpdfstring{PaintAllInCategory()}{PaintAllInCategory()}}
+{\footnotesize\ttfamily \label{class_prop_paint_a693ed16c8cd4da275a94bf33deb90ecb} 
+static void Prop\+Paint.\+Paint\+All\+In\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}}}]{paint}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Paints all props of a given paintable category in the current scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paintable\+Category} & \\
+\hline
+{\em paint} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_paint_a149a87df74eb92c0a179b82ec1dbde73}\index{PropPaint@{PropPaint}!PaintProp@{PaintProp}}
+\index{PaintProp@{PaintProp}!PropPaint@{PropPaint}}
+\doxysubsubsection{\texorpdfstring{PaintProp()}{PaintProp()}}
+{\footnotesize\ttfamily \label{class_prop_paint_a149a87df74eb92c0a179b82ec1dbde73} 
+void Prop\+Paint.\+Paint\+Prop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}}}]{paint}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes the main paint logic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paint} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_paint_aada1c472f6c81077fbd1f953f6526586}\index{PropPaint@{PropPaint}!PaintThisProp@{PaintThisProp}}
+\index{PaintThisProp@{PaintThisProp}!PropPaint@{PropPaint}}
+\doxysubsubsection{\texorpdfstring{PaintThisProp()}{PaintThisProp()}}
+{\footnotesize\ttfamily \label{class_prop_paint_aada1c472f6c81077fbd1f953f6526586} 
+void Prop\+Paint.\+Paint\+This\+Prop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Paint}}}]{paint}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{struct_prop_paint_1_1_paint}{Paint} the attached \doxylink{class_prop}{Prop} with its paints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paint} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/\+Paint/Prop\+Paint.\+cs\end{DoxyCompactItemize}

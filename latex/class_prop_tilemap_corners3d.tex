@@ -1,0 +1,114 @@
+\doxysection{Prop\+Tilemap\+Corners3d Class Reference}
+\hypertarget{class_prop_tilemap_corners3d}{}\label{class_prop_tilemap_corners3d}\index{PropTilemapCorners3d@{PropTilemapCorners3d}}
+
+
+Handles tiling on paths or other tiling props. Each material in tile\+Materials is associated with a "{}tile"{} that is placed only when certain connected\+Tile conditions are met.  
+
+
+Inheritance diagram for Prop\+Tilemap\+Corners3d\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_prop_tilemap_corners3d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_tilemap_corners3d_a23f5714671e1da2ff7cd30ee601f8e7a}\label{class_prop_tilemap_corners3d_a23f5714671e1da2ff7cd30ee601f8e7a} 
+Mesh\+Filter {\bfseries corner\+Top\+Right}
+\item 
+\Hypertarget{class_prop_tilemap_corners3d_a88349831588b39433937097f85c271c8}\label{class_prop_tilemap_corners3d_a88349831588b39433937097f85c271c8} 
+Mesh\+Filter {\bfseries corner\+Top\+Left}
+\item 
+\Hypertarget{class_prop_tilemap_corners3d_a628abb33a76ca28c4f3f6cd261996f0c}\label{class_prop_tilemap_corners3d_a628abb33a76ca28c4f3f6cd261996f0c} 
+Mesh\+Filter {\bfseries corner\+Bottom\+Right}
+\item 
+\Hypertarget{class_prop_tilemap_corners3d_a0a600c6160e9fdbe066f3a533995460c}\label{class_prop_tilemap_corners3d_a0a600c6160e9fdbe066f3a533995460c} 
+Mesh\+Filter {\bfseries corner\+Bottom\+Left}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_prop_tilemap}{Prop\+Tilemap}}}
+\begin{DoxyCompactItemize}
+\item 
+Mesh\mbox{[}$\,$\mbox{]} {\bfseries tile\+Meshes}
+\begin{DoxyCompactList}\small\item\em Array of meshes for each combination -\/ check extended class summary for order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_prop_tilemap_corners3d_aae6fbfa1ed106e03139937328be626bf}{Calculate\+Tilemap}} (\mbox{\hyperlink{class_prop}{Prop}} prop, bool recursive=false)
+\begin{DoxyCompactList}\small\item\em Calculates the correct tile to use for each corner of the prop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_prop_tilemap}{Prop\+Tilemap}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_prop_tilemap_a433feab75e9d7f740c9fac4520eda8da}{Get\+Edge\+Code}} (\mbox{\hyperlink{class_prop}{Prop}} prop, Vector3\mbox{[}$\,$\mbox{]} edges)
+\begin{DoxyCompactList}\small\item\em Gets the edge code for a cell for north, east, south, west. The edge code is binary. I know this one is a little tricky! Basically, it has a binary number equal to the length of edge, and it assigns a bit to each direction. If the bit associated with that edge is 1, that edge is connecting to another prop. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_prop_tilemap_a7e99b5f108a8327ee5e8e4fc68b246b1}{Assign\+Mesh}} (int edge\+Code, Mesh\+Filter mesh\+Filter)
+\begin{DoxyCompactList}\small\item\em Rotates the prop to ensure the material aligns properly with its connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_tilemap_a88db2a9c3b968ef9789cb88d0088f9ec}{Calculate\+Connected\+Tilemaps}} (Dictionary$<$ Vector3, \mbox{\hyperlink{class_prop}{Prop}} $>$ connected\+Edges)
+\begin{DoxyCompactList}\small\item\em Recalculate connected tilemaps with connected edges already discovered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_prop_tilemap}{Prop\+Tilemap}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Calculate\+Tilemap} ()
+\item 
+void \mbox{\hyperlink{class_prop_tilemap_a4ab73e4490e70c308e755cd268a8d178}{Calculate\+Connected\+Tilemaps}} (\mbox{\hyperlink{class_prop}{Prop}} prop)
+\begin{DoxyCompactList}\small\item\em Recalculate connected tilemaps and rediscover connected edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_prop_tilemap}{Prop\+Tilemap}}}
+\begin{DoxyCompactItemize}
+\item 
+static Vector3 {\bfseries top} = Vector3.\+forward
+\item 
+static Vector3 {\bfseries right} = Vector3.\+right
+\item 
+static Vector3 {\bfseries bottom} = Vector3.\+back
+\item 
+static Vector3 {\bfseries left} = Vector3.\+left
+\item 
+static Vector3 {\bfseries topleft} = top + left
+\item 
+static Vector3 {\bfseries topright} = top + right
+\item 
+static Vector3 {\bfseries bottomright} = bottom + right
+\item 
+static Vector3 {\bfseries bottomleft} = bottom + left
+\item 
+static Vector3 {\bfseries down} = Vector3.\+down
+\item 
+static Vector3 {\bfseries up} = Vector3.\+up
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles tiling on paths or other tiling props. Each material in tile\+Materials is associated with a "{}tile"{} that is placed only when certain connected\+Tile conditions are met. 
+
+Meshes Corner Mesh Top\+Right Corner Mesh Bottom\+Right Corner Mesh Top\+Left Corner Mesh Bottom\+Left
+
+Edge Code Binary Connected Edges 0 000 No connections 1 001 Side only 2 010 Diagonal only 3 011 Diagonal + side 4 100 Top only 5 101 Top + side 6 110 Top + diagonal 7 111 top + diaonal + side 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prop_tilemap_corners3d_aae6fbfa1ed106e03139937328be626bf}\index{PropTilemapCorners3d@{PropTilemapCorners3d}!CalculateTilemap@{CalculateTilemap}}
+\index{CalculateTilemap@{CalculateTilemap}!PropTilemapCorners3d@{PropTilemapCorners3d}}
+\doxysubsubsection{\texorpdfstring{CalculateTilemap()}{CalculateTilemap()}}
+{\footnotesize\ttfamily \label{class_prop_tilemap_corners3d_aae6fbfa1ed106e03139937328be626bf} 
+override void Prop\+Tilemap\+Corners3d.\+Calculate\+Tilemap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop}{Prop}}}]{prop}{, }\item[{bool}]{recursive}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the correct tile to use for each corner of the prop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & \\
+\hline
+{\em recursive} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_prop_tilemap_a73b212727fdf5f2f2719152d33e8fc88}{Prop\+Tilemap}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/\+Tilemap/Prop\+Tilemap\+Corners3d.\+cs\end{DoxyCompactItemize}

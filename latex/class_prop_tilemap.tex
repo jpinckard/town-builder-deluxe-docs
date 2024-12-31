@@ -1,0 +1,168 @@
+\doxysection{Prop\+Tilemap Class Reference}
+\hypertarget{class_prop_tilemap}{}\label{class_prop_tilemap}\index{PropTilemap@{PropTilemap}}
+
+
+The base class for all Prop\+Tilemaps. You shouldn\textquotesingle{}t attach this to a Game\+Object directly. You can extend this class to make your own tileset rules.  
+
+
+Inheritance diagram for Prop\+Tilemap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_prop_tilemap}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_tilemap_ac91066ae9bc982d60b2f43d8eea3686f}\label{class_prop_tilemap_ac91066ae9bc982d60b2f43d8eea3686f} 
+void {\bfseries Calculate\+Tilemap} ()
+\item 
+void \mbox{\hyperlink{class_prop_tilemap_a4ab73e4490e70c308e755cd268a8d178}{Calculate\+Connected\+Tilemaps}} (\mbox{\hyperlink{class_prop}{Prop}} prop)
+\begin{DoxyCompactList}\small\item\em Recalculate connected tilemaps and rediscover connected edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_tilemap_ab420346b632e1dc565d4963f2e688eef}\label{class_prop_tilemap_ab420346b632e1dc565d4963f2e688eef} 
+Mesh\mbox{[}$\,$\mbox{]} {\bfseries tile\+Meshes}
+\begin{DoxyCompactList}\small\item\em Array of meshes for each combination -\/ check extended class summary for order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_tilemap_aaaa6b0658a5eb20165540717a120535b}\label{class_prop_tilemap_aaaa6b0658a5eb20165540717a120535b} 
+static Vector3 {\bfseries top} = Vector3.\+forward
+\item 
+\Hypertarget{class_prop_tilemap_ac94864ed1402bd17b0ef094e60155f66}\label{class_prop_tilemap_ac94864ed1402bd17b0ef094e60155f66} 
+static Vector3 {\bfseries right} = Vector3.\+right
+\item 
+\Hypertarget{class_prop_tilemap_a272d4cb7532be3f15c5da88766b0843f}\label{class_prop_tilemap_a272d4cb7532be3f15c5da88766b0843f} 
+static Vector3 {\bfseries bottom} = Vector3.\+back
+\item 
+\Hypertarget{class_prop_tilemap_a536a1de3043feb62ec88dd2da00eb5a8}\label{class_prop_tilemap_a536a1de3043feb62ec88dd2da00eb5a8} 
+static Vector3 {\bfseries left} = Vector3.\+left
+\item 
+\Hypertarget{class_prop_tilemap_a4d84e73d965c40bd358c41ff2d7ac434}\label{class_prop_tilemap_a4d84e73d965c40bd358c41ff2d7ac434} 
+static Vector3 {\bfseries topleft} = top + left
+\item 
+\Hypertarget{class_prop_tilemap_acb3b00b76b029e81363274f0fec06356}\label{class_prop_tilemap_acb3b00b76b029e81363274f0fec06356} 
+static Vector3 {\bfseries topright} = top + right
+\item 
+\Hypertarget{class_prop_tilemap_ae9078999b278b56affd16e23f94f2ebb}\label{class_prop_tilemap_ae9078999b278b56affd16e23f94f2ebb} 
+static Vector3 {\bfseries bottomright} = bottom + right
+\item 
+\Hypertarget{class_prop_tilemap_a139a50ee1c20d175778aa3b45622466e}\label{class_prop_tilemap_a139a50ee1c20d175778aa3b45622466e} 
+static Vector3 {\bfseries bottomleft} = bottom + left
+\item 
+\Hypertarget{class_prop_tilemap_ac4a74a3ad503cb3a900de58ac2ccbbd5}\label{class_prop_tilemap_ac4a74a3ad503cb3a900de58ac2ccbbd5} 
+static Vector3 {\bfseries down} = Vector3.\+down
+\item 
+\Hypertarget{class_prop_tilemap_a970d6b319033cb4a01406ff238f00bd4}\label{class_prop_tilemap_a970d6b319033cb4a01406ff238f00bd4} 
+static Vector3 {\bfseries up} = Vector3.\+up
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_prop_tilemap_a73b212727fdf5f2f2719152d33e8fc88}{Calculate\+Tilemap}} (\mbox{\hyperlink{class_prop}{Prop}} prop, bool recursive=false)
+\begin{DoxyCompactList}\small\item\em Calculates the correct tile to use for each corner of the prop. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_prop_tilemap_a433feab75e9d7f740c9fac4520eda8da}{Get\+Edge\+Code}} (\mbox{\hyperlink{class_prop}{Prop}} prop, Vector3\mbox{[}$\,$\mbox{]} edges)
+\begin{DoxyCompactList}\small\item\em Gets the edge code for a cell for north, east, south, west. The edge code is binary. I know this one is a little tricky! Basically, it has a binary number equal to the length of edge, and it assigns a bit to each direction. If the bit associated with that edge is 1, that edge is connecting to another prop. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_prop_tilemap_a7e99b5f108a8327ee5e8e4fc68b246b1}{Assign\+Mesh}} (int edge\+Code, Mesh\+Filter mesh\+Filter)
+\begin{DoxyCompactList}\small\item\em Rotates the prop to ensure the material aligns properly with its connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_tilemap_a88db2a9c3b968ef9789cb88d0088f9ec}{Calculate\+Connected\+Tilemaps}} (Dictionary$<$ Vector3, \mbox{\hyperlink{class_prop}{Prop}} $>$ connected\+Edges)
+\begin{DoxyCompactList}\small\item\em Recalculate connected tilemaps with connected edges already discovered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for all Prop\+Tilemaps. You shouldn\textquotesingle{}t attach this to a Game\+Object directly. You can extend this class to make your own tileset rules. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prop_tilemap_a7e99b5f108a8327ee5e8e4fc68b246b1}\index{PropTilemap@{PropTilemap}!AssignMesh@{AssignMesh}}
+\index{AssignMesh@{AssignMesh}!PropTilemap@{PropTilemap}}
+\doxysubsubsection{\texorpdfstring{AssignMesh()}{AssignMesh()}}
+{\footnotesize\ttfamily \label{class_prop_tilemap_a7e99b5f108a8327ee5e8e4fc68b246b1} 
+virtual void Prop\+Tilemap.\+Assign\+Mesh (\begin{DoxyParamCaption}\item[{int}]{edge\+Code}{, }\item[{Mesh\+Filter}]{mesh\+Filter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Rotates the prop to ensure the material aligns properly with its connections. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+Code} & The edge code representing the connections.\\
+\hline
+{\em meshes} & Array of meshes for different connection types.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_tilemap_a88db2a9c3b968ef9789cb88d0088f9ec}\index{PropTilemap@{PropTilemap}!CalculateConnectedTilemaps@{CalculateConnectedTilemaps}}
+\index{CalculateConnectedTilemaps@{CalculateConnectedTilemaps}!PropTilemap@{PropTilemap}}
+\doxysubsubsection{\texorpdfstring{CalculateConnectedTilemaps()}{CalculateConnectedTilemaps()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_prop_tilemap_a88db2a9c3b968ef9789cb88d0088f9ec} 
+void Prop\+Tilemap.\+Calculate\+Connected\+Tilemaps (\begin{DoxyParamCaption}\item[{Dictionary$<$ Vector3, \mbox{\hyperlink{class_prop}{Prop}} $>$}]{connected\+Edges}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Recalculate connected tilemaps with connected edges already discovered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connected\+Edges} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_tilemap_a4ab73e4490e70c308e755cd268a8d178}\index{PropTilemap@{PropTilemap}!CalculateConnectedTilemaps@{CalculateConnectedTilemaps}}
+\index{CalculateConnectedTilemaps@{CalculateConnectedTilemaps}!PropTilemap@{PropTilemap}}
+\doxysubsubsection{\texorpdfstring{CalculateConnectedTilemaps()}{CalculateConnectedTilemaps()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_prop_tilemap_a4ab73e4490e70c308e755cd268a8d178} 
+void Prop\+Tilemap.\+Calculate\+Connected\+Tilemaps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop}{Prop}}}]{prop}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recalculate connected tilemaps and rediscover connected edges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_tilemap_a73b212727fdf5f2f2719152d33e8fc88}\index{PropTilemap@{PropTilemap}!CalculateTilemap@{CalculateTilemap}}
+\index{CalculateTilemap@{CalculateTilemap}!PropTilemap@{PropTilemap}}
+\doxysubsubsection{\texorpdfstring{CalculateTilemap()}{CalculateTilemap()}}
+{\footnotesize\ttfamily \label{class_prop_tilemap_a73b212727fdf5f2f2719152d33e8fc88} 
+virtual void Prop\+Tilemap.\+Calculate\+Tilemap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop}{Prop}}}]{prop}{, }\item[{bool}]{recursive}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the correct tile to use for each corner of the prop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & \\
+\hline
+{\em recursive} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_prop_tilemap_cardinal_a3392ed312e5e68bce7bf541392f640dc}{Prop\+Tilemap\+Cardinal}}, and \mbox{\hyperlink{class_prop_tilemap_corners3d_aae6fbfa1ed106e03139937328be626bf}{Prop\+Tilemap\+Corners3d}}.
+
+\Hypertarget{class_prop_tilemap_a433feab75e9d7f740c9fac4520eda8da}\index{PropTilemap@{PropTilemap}!GetEdgeCode@{GetEdgeCode}}
+\index{GetEdgeCode@{GetEdgeCode}!PropTilemap@{PropTilemap}}
+\doxysubsubsection{\texorpdfstring{GetEdgeCode()}{GetEdgeCode()}}
+{\footnotesize\ttfamily \label{class_prop_tilemap_a433feab75e9d7f740c9fac4520eda8da} 
+int Prop\+Tilemap.\+Get\+Edge\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop}{Prop}}}]{prop}{, }\item[{Vector3\mbox{[}$\,$\mbox{]}}]{edges}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the edge code for a cell for north, east, south, west. The edge code is binary. I know this one is a little tricky! Basically, it has a binary number equal to the length of edge, and it assigns a bit to each direction. If the bit associated with that edge is 1, that edge is connecting to another prop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/\+Tilemap/Prop\+Tilemap.\+cs\end{DoxyCompactItemize}

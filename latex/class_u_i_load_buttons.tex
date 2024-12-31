@@ -1,0 +1,111 @@
+\doxysection{UILoad\+Buttons Class Reference}
+\hypertarget{class_u_i_load_buttons}{}\label{class_u_i_load_buttons}\index{UILoadButtons@{UILoadButtons}}
+
+
+A generic script for loading buttons associated with an Object. Super useful for getting uniform UIs up-\/and-\/running. Ensure that the Objects you\textquotesingle{}re loading use the \doxylink{interface_i_display_data}{IDisplay\+Data} interface.  
+
+
+Inheritance diagram for UILoad\+Buttons\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_i_load_buttons}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_i_load_buttons_a1adf18e7f387c3992edabd568e69a187}{Populate\+Buttons}} (string filter\+Tag)
+\begin{DoxyCompactList}\small\item\em For calling the Populate\+Buttons function from the unity inspector (where it needs one argument) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_load_buttons_a712d840c2bc24d702f2b68b0006a673b}\label{class_u_i_load_buttons_a712d840c2bc24d702f2b68b0006a673b} 
+Transform {\bfseries content}
+\begin{DoxyCompactList}\small\item\em The scroll view\textquotesingle{}s content Transform where the buttons will be added. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_load_buttons_a5d1b09f77e59cb39c47434015c392b80}\label{class_u_i_load_buttons_a5d1b09f77e59cb39c47434015c392b80} 
+Game\+Object {\bfseries button\+Prefab}
+\begin{DoxyCompactList}\small\item\em The prefab for the button to create for each prop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_i_load_buttons_a183c7d379a3b37031f111dcc6b40f6dc}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Populates the scroll view with buttons for each prop in the available\+Props list. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_load_buttons_ae26744863f2df17bc70ee70233f66482}{Populate\+Buttons}} (string filter\+Tag, List$<$ \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}} $>$ my\+List)
+\begin{DoxyCompactList}\small\item\em Creates a button for each prop and assigns its functionality. \doxylink{class_prop_grid_a9b10206120ab90321618f8fc757bdcdd}{Prop\+Grid.\+Get\+All\+Props()} \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_load_buttons_a7c8e448b896540337ef11b3d65e5b12b}{On\+Button\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Implement button click features specific to the inherited script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A generic script for loading buttons associated with an Object. Super useful for getting uniform UIs up-\/and-\/running. Ensure that the Objects you\textquotesingle{}re loading use the \doxylink{interface_i_display_data}{IDisplay\+Data} interface. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_i_load_buttons_a7c8e448b896540337ef11b3d65e5b12b}\index{UILoadButtons@{UILoadButtons}!OnButtonClick@{OnButtonClick}}
+\index{OnButtonClick@{OnButtonClick}!UILoadButtons@{UILoadButtons}}
+\doxysubsubsection{\texorpdfstring{OnButtonClick()}{OnButtonClick()}}
+{\footnotesize\ttfamily \label{class_u_i_load_buttons_a7c8e448b896540337ef11b3d65e5b12b} 
+virtual void UILoad\+Buttons.\+On\+Button\+Click (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implement button click features specific to the inherited script. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_u_i_paint_a00c0e031aefe69acbff1d7ea42850a5a}{UIPaint}}, and \mbox{\hyperlink{class_u_i_prop_a1a8a90108b25c15ef193e665943594ce}{UIProp}}.
+
+\Hypertarget{class_u_i_load_buttons_a1adf18e7f387c3992edabd568e69a187}\index{UILoadButtons@{UILoadButtons}!PopulateButtons@{PopulateButtons}}
+\index{PopulateButtons@{PopulateButtons}!UILoadButtons@{UILoadButtons}}
+\doxysubsubsection{\texorpdfstring{PopulateButtons()}{PopulateButtons()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_u_i_load_buttons_a1adf18e7f387c3992edabd568e69a187} 
+virtual void UILoad\+Buttons.\+Populate\+Buttons (\begin{DoxyParamCaption}\item[{string}]{filter\+Tag}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+For calling the Populate\+Buttons function from the unity inspector (where it needs one argument) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+Tag} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_u_i_paint_a20eb14a9586cec7cbde6bd1b5a9d54a9}{UIPaint}}, and \mbox{\hyperlink{class_u_i_prop_aedd855369a6ea302ec1c9bbf8a382ce0}{UIProp}}.
+
+\Hypertarget{class_u_i_load_buttons_ae26744863f2df17bc70ee70233f66482}\index{UILoadButtons@{UILoadButtons}!PopulateButtons@{PopulateButtons}}
+\index{PopulateButtons@{PopulateButtons}!UILoadButtons@{UILoadButtons}}
+\doxysubsubsection{\texorpdfstring{PopulateButtons()}{PopulateButtons()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_u_i_load_buttons_ae26744863f2df17bc70ee70233f66482} 
+virtual void UILoad\+Buttons.\+Populate\+Buttons (\begin{DoxyParamCaption}\item[{string}]{filter\+Tag}{, }\item[{List$<$ \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}} $>$}]{my\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a button for each prop and assigns its functionality. \doxylink{class_prop_grid_a9b10206120ab90321618f8fc757bdcdd}{Prop\+Grid.\+Get\+All\+Props()} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+List} & A list of a type THAT HAS "{}name"{} and "{}icon"{} as a member. \\
+\hline
+{\em filter\+Tag} & A tag to filter by.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_load_buttons_a183c7d379a3b37031f111dcc6b40f6dc}\index{UILoadButtons@{UILoadButtons}!Start@{Start}}
+\index{Start@{Start}!UILoadButtons@{UILoadButtons}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_u_i_load_buttons_a183c7d379a3b37031f111dcc6b40f6dc} 
+virtual void UILoad\+Buttons.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Populates the scroll view with buttons for each prop in the available\+Props list. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_u_i_paint_a4429773491102afab26d642a22f6e4e5}{UIPaint}}, and \mbox{\hyperlink{class_u_i_prop_a9254d008030c519944e3e63b5a584cf4}{UIProp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/\+User\+Interface/UILoad\+Buttons.\+cs\end{DoxyCompactItemize}

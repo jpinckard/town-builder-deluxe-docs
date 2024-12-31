@@ -1,0 +1,124 @@
+\doxysection{UIProp Class Reference}
+\hypertarget{class_u_i_prop}{}\label{class_u_i_prop}\index{UIProp@{UIProp}}
+
+
+Responsible for creating and initializing prop buttons.  
+
+
+Inheritance diagram for UIProp\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_i_prop}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_prop_a864b12eebf81cd286e80b8b0ba62c317}{Set\+Build\+State}} (Point\+And\+Click.\+Build\+State state)
+\begin{DoxyCompactList}\small\item\em Set the build state to determine what the buttons should do when pressed. When the button is pressed, it will set the build\+State function in Point\+And\+Click.\+cs. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_prop_a771162f82ac53428805a81c4d6c2eafb}\label{class_u_i_prop_a771162f82ac53428805a81c4d6c2eafb} 
+void {\bfseries Set\+Build\+State\+Place} ()
+\begin{DoxyCompactList}\small\item\em Sets the build state FOR THE UI PROP SELECTOR to PLACE, so when we press a button it will swap to that state. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_prop_aa526e92a5d654271419a3292239dc88e}\label{class_u_i_prop_aa526e92a5d654271419a3292239dc88e} 
+void {\bfseries Set\+Build\+State\+Replace} ()
+\begin{DoxyCompactList}\small\item\em Sets the build state FOR THE UI PROP SELECTOR to REPLACE, so when we press a button it will swap to that state. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_u_i_prop_aedd855369a6ea302ec1c9bbf8a382ce0}{Populate\+Buttons}} (string filter\+Tag)
+\begin{DoxyCompactList}\small\item\em Call Populate\+Buttons with the given tag. Call is set in Inspector UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_prop_a1a7f7d28feee0a61084864385822e381}\label{class_u_i_prop_a1a7f7d28feee0a61084864385822e381} 
+string {\bfseries initial\+Tag} = "{}"{}
+\begin{DoxyCompactList}\small\item\em The type of prop to load on start. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_load_buttons}{UILoad\+Buttons}}}
+\begin{DoxyCompactItemize}
+\item 
+Transform {\bfseries content}
+\begin{DoxyCompactList}\small\item\em The scroll view\textquotesingle{}s content Transform where the buttons will be added. \end{DoxyCompactList}\item 
+Game\+Object {\bfseries button\+Prefab}
+\begin{DoxyCompactList}\small\item\em The prefab for the button to create for each prop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_u_i_prop_a9254d008030c519944e3e63b5a584cf4}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Populates the scroll view with buttons for each prop in the list. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_u_i_prop_a1a8a90108b25c15ef193e665943594ce}{On\+Button\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Implement button click features specific to the inherited script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i_load_buttons}{UILoad\+Buttons}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_i_load_buttons_ae26744863f2df17bc70ee70233f66482}{Populate\+Buttons}} (string filter\+Tag, List$<$ \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}} $>$ my\+List)
+\begin{DoxyCompactList}\small\item\em Creates a button for each prop and assigns its functionality. \doxylink{class_prop_grid_a9b10206120ab90321618f8fc757bdcdd}{Prop\+Grid.\+Get\+All\+Props()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for creating and initializing prop buttons. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_i_prop_a1a8a90108b25c15ef193e665943594ce}\index{UIProp@{UIProp}!OnButtonClick@{OnButtonClick}}
+\index{OnButtonClick@{OnButtonClick}!UIProp@{UIProp}}
+\doxysubsubsection{\texorpdfstring{OnButtonClick()}{OnButtonClick()}}
+{\footnotesize\ttfamily \label{class_u_i_prop_a1a8a90108b25c15ef193e665943594ce} 
+override void UIProp.\+On\+Button\+Click (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implement button click features specific to the inherited script. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_load_buttons_a7c8e448b896540337ef11b3d65e5b12b}{UILoad\+Buttons}}.
+
+\Hypertarget{class_u_i_prop_aedd855369a6ea302ec1c9bbf8a382ce0}\index{UIProp@{UIProp}!PopulateButtons@{PopulateButtons}}
+\index{PopulateButtons@{PopulateButtons}!UIProp@{UIProp}}
+\doxysubsubsection{\texorpdfstring{PopulateButtons()}{PopulateButtons()}}
+{\footnotesize\ttfamily \label{class_u_i_prop_aedd855369a6ea302ec1c9bbf8a382ce0} 
+override void UIProp.\+Populate\+Buttons (\begin{DoxyParamCaption}\item[{string}]{filter\+Tag}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Call Populate\+Buttons with the given tag. Call is set in Inspector UI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+Tag} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_load_buttons_a1adf18e7f387c3992edabd568e69a187}{UILoad\+Buttons}}.
+
+\Hypertarget{class_u_i_prop_a864b12eebf81cd286e80b8b0ba62c317}\index{UIProp@{UIProp}!SetBuildState@{SetBuildState}}
+\index{SetBuildState@{SetBuildState}!UIProp@{UIProp}}
+\doxysubsubsection{\texorpdfstring{SetBuildState()}{SetBuildState()}}
+{\footnotesize\ttfamily \label{class_u_i_prop_a864b12eebf81cd286e80b8b0ba62c317} 
+void UIProp.\+Set\+Build\+State (\begin{DoxyParamCaption}\item[{Point\+And\+Click.\+Build\+State}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the build state to determine what the buttons should do when pressed. When the button is pressed, it will set the build\+State function in Point\+And\+Click.\+cs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_prop_a9254d008030c519944e3e63b5a584cf4}\index{UIProp@{UIProp}!Start@{Start}}
+\index{Start@{Start}!UIProp@{UIProp}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_u_i_prop_a9254d008030c519944e3e63b5a584cf4} 
+override void UIProp.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Populates the scroll view with buttons for each prop in the list. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_load_buttons_a183c7d379a3b37031f111dcc6b40f6dc}{UILoad\+Buttons}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/\+User\+Interface/UIProp.\+cs\end{DoxyCompactItemize}

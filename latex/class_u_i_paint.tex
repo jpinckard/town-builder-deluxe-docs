@@ -1,0 +1,104 @@
+\doxysection{UIPaint Class Reference}
+\hypertarget{class_u_i_paint}{}\label{class_u_i_paint}\index{UIPaint@{UIPaint}}
+
+
+Responsible for creating and initializing prop buttons.  
+
+
+Inheritance diagram for UIPaint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_i_paint}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_u_i_paint_a20eb14a9586cec7cbde6bd1b5a9d54a9}{Populate\+Buttons}} (string filter\+Tag)
+\begin{DoxyCompactList}\small\item\em Call Populate\+Buttons with the given tag. Call is set in Inspector UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_paint_a43c998ba08874f8c2e329da867947c59}\label{class_u_i_paint_a43c998ba08874f8c2e329da867947c59} 
+\mbox{\hyperlink{class_prop_paint_ab1df303d853cf5773be48f348f7db13c}{Prop\+Paint.\+Paintable\+Category}} {\bfseries paint\+Category}
+\begin{DoxyCompactList}\small\item\em The category of paint to load on start. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_paint_ab1734e423edf833722e3a2a7a60909aa}\label{class_u_i_paint_ab1734e423edf833722e3a2a7a60909aa} 
+List$<$ \mbox{\hyperlink{class_paint}{Paint}} $>$ {\bfseries all\+Paint}
+\begin{DoxyCompactList}\small\item\em All paint in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_load_buttons}{UILoad\+Buttons}}}
+\begin{DoxyCompactItemize}
+\item 
+Transform {\bfseries content}
+\begin{DoxyCompactList}\small\item\em The scroll view\textquotesingle{}s content Transform where the buttons will be added. \end{DoxyCompactList}\item 
+Game\+Object {\bfseries button\+Prefab}
+\begin{DoxyCompactList}\small\item\em The prefab for the button to create for each prop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_u_i_paint_a4429773491102afab26d642a22f6e4e5}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Populates the scroll view with buttons for each prop in the list. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_u_i_paint_a00c0e031aefe69acbff1d7ea42850a5a}{On\+Button\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Implement button click features specific to the inherited script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i_load_buttons}{UILoad\+Buttons}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_i_load_buttons_ae26744863f2df17bc70ee70233f66482}{Populate\+Buttons}} (string filter\+Tag, List$<$ \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}} $>$ my\+List)
+\begin{DoxyCompactList}\small\item\em Creates a button for each prop and assigns its functionality. \doxylink{class_prop_grid_a9b10206120ab90321618f8fc757bdcdd}{Prop\+Grid.\+Get\+All\+Props()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for creating and initializing prop buttons. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_i_paint_a00c0e031aefe69acbff1d7ea42850a5a}\index{UIPaint@{UIPaint}!OnButtonClick@{OnButtonClick}}
+\index{OnButtonClick@{OnButtonClick}!UIPaint@{UIPaint}}
+\doxysubsubsection{\texorpdfstring{OnButtonClick()}{OnButtonClick()}}
+{\footnotesize\ttfamily \label{class_u_i_paint_a00c0e031aefe69acbff1d7ea42850a5a} 
+override void UIPaint.\+On\+Button\+Click (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implement button click features specific to the inherited script. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_load_buttons_a7c8e448b896540337ef11b3d65e5b12b}{UILoad\+Buttons}}.
+
+\Hypertarget{class_u_i_paint_a20eb14a9586cec7cbde6bd1b5a9d54a9}\index{UIPaint@{UIPaint}!PopulateButtons@{PopulateButtons}}
+\index{PopulateButtons@{PopulateButtons}!UIPaint@{UIPaint}}
+\doxysubsubsection{\texorpdfstring{PopulateButtons()}{PopulateButtons()}}
+{\footnotesize\ttfamily \label{class_u_i_paint_a20eb14a9586cec7cbde6bd1b5a9d54a9} 
+override void UIPaint.\+Populate\+Buttons (\begin{DoxyParamCaption}\item[{string}]{filter\+Tag}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Call Populate\+Buttons with the given tag. Call is set in Inspector UI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+Tag} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_load_buttons_a1adf18e7f387c3992edabd568e69a187}{UILoad\+Buttons}}.
+
+\Hypertarget{class_u_i_paint_a4429773491102afab26d642a22f6e4e5}\index{UIPaint@{UIPaint}!Start@{Start}}
+\index{Start@{Start}!UIPaint@{UIPaint}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_u_i_paint_a4429773491102afab26d642a22f6e4e5} 
+override void UIPaint.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Populates the scroll view with buttons for each prop in the list. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_load_buttons_a183c7d379a3b37031f111dcc6b40f6dc}{UILoad\+Buttons}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/\+User\+Interface/UIPaint.\+cs\end{DoxyCompactItemize}

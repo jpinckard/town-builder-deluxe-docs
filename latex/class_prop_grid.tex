@@ -1,0 +1,170 @@
+\doxysection{Prop\+Grid Class Reference}
+\hypertarget{class_prop_grid}{}\label{class_prop_grid}\index{PropGrid@{PropGrid}}
+
+
+Handles information about the grid, storage and retrieval of props on the grid, and manipulation of props on the grid. Holds the grid object.  
+
+
+Inheritance diagram for Prop\+Grid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_prop_grid}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_grid_a889751567d06fa166ffe11b0503e94aa}\label{class_prop_grid_a889751567d06fa166ffe11b0503e94aa} 
+void {\bfseries Get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the only instance of this script in the scene. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a93090f8798f9e1b9d921d77f983ad133}\label{class_prop_grid_a93090f8798f9e1b9d921d77f983ad133} 
+Vector3 {\bfseries Get\+Grid\+Position} (Vector3 point, Transform t, Vector3 \mbox{\hyperlink{class_prop_grid_a43e8c548ff4161d355aeae527fe2466f}{cell\+Size}}, bool top=true, bool bottom=true)
+\begin{DoxyCompactList}\small\item\em Get the target position. The "{}top"{} of the clicked position is either the top of the collider bounds Or the actual hit point. Checks for reasonable range based on cell size. If top is true, anchors to top of mesh -\/ if top is false, anchors to bottom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_grid_af85acaac1a18d44ca48da301f0b504a9}{Rotate}} (\mbox{\hyperlink{class_prop}{Prop}} prop)
+\begin{DoxyCompactList}\small\item\em Rotate a given prop by a set number of degrees. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a633b2f460b36da555a342dcceab58dfb}\label{class_prop_grid_a633b2f460b36da555a342dcceab58dfb} 
+void {\bfseries Toggle\+Snap} (\mbox{\hyperlink{class_prop}{Prop}} prop)
+\begin{DoxyCompactList}\small\item\em Toggles grid snapping -\/ allows players to place most items more freely. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_grid_ae79c918128cdc712c6f9497b00e15627}{Check\+Snap\+Hardcoded}} (\mbox{\hyperlink{class_prop}{Prop}} prop)
+\begin{DoxyCompactList}\small\item\em If the \doxylink{class_prop}{Prop} has a set Cell Size, this will ensure snap\+To\+Grid is enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Transform \mbox{\hyperlink{class_prop_grid_a7b6f63f773bb3acb3e10209b0237a21f}{Make\+Prop}} (Transform prefab, Vector3 position, Quaternion rotation)
+\begin{DoxyCompactList}\small\item\em Add a prop to the scene. \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{class_prop}{Prop}} $>$ \mbox{\hyperlink{class_prop_grid_a9b10206120ab90321618f8fc757bdcdd}{Get\+All\+Props}} ()
+\begin{DoxyCompactList}\small\item\em Get all the props in the game. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a6dd764bd30bbb5aa6463de5ce819d635}\label{class_prop_grid_a6dd764bd30bbb5aa6463de5ce819d635} 
+static void {\bfseries Delete\+All\+Props} ()
+\begin{DoxyCompactList}\small\item\em Destroys all props in the prop\+Parent. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_prop}{Prop}} \mbox{\hyperlink{class_prop_grid_adc54cb1ff8378b2d38226f8ff850ed80}{Get\+Prop}} (string prop\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieve a given prop prefab from the list of all props by its name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_grid_a43e8c548ff4161d355aeae527fe2466f}\label{class_prop_grid_a43e8c548ff4161d355aeae527fe2466f} 
+Vector3 {\bfseries cell\+Size} = new(1, 1, 1)
+\begin{DoxyCompactList}\small\item\em The size of cells on the grid. Can be non-\/uniform. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a1efabb9ea12625b1b0ab9be7c3457654}\label{class_prop_grid_a1efabb9ea12625b1b0ab9be7c3457654} 
+Vector3 {\bfseries cell\+Gap} = new(0, 0, 0)
+\begin{DoxyCompactList}\small\item\em Space between cells on the grid. X, Y, and Z must be greater than or equal to zero. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_abcf9dec7310968771d3d1faaff4ae63b}\label{class_prop_grid_abcf9dec7310968771d3d1faaff4ae63b} 
+List$<$ \mbox{\hyperlink{class_prop}{Prop}} $>$ {\bfseries all\+Props}
+\begin{DoxyCompactList}\small\item\em All props in the game. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_afbd35842804c438aeeb10d64d2dcc0ea}\label{class_prop_grid_afbd35842804c438aeeb10d64d2dcc0ea} 
+Transform {\bfseries prop\+Parent}
+\begin{DoxyCompactList}\small\item\em The Game\+Object that acts as a parent to all user-\/instantiated props. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a1de45a1185f5193c3151c1414c2c2b6a}\label{class_prop_grid_a1de45a1185f5193c3151c1414c2c2b6a} 
+Material {\bfseries hover\+Material}
+\begin{DoxyCompactList}\small\item\em The material to apply during hover (can be None to ignore) \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a26ccaa679e432388c92416f05d4788df}\label{class_prop_grid_a26ccaa679e432388c92416f05d4788df} 
+Material {\bfseries invalid\+Material}
+\begin{DoxyCompactList}\small\item\em The material to apply when the \doxylink{class_prop}{Prop} is hovering over an invalid position (can be None to ignore) \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a9fb0bbd6880bc919d5bdd0fa1b2f388a}\label{class_prop_grid_a9fb0bbd6880bc919d5bdd0fa1b2f388a} 
+float {\bfseries max\+Place\+Height} = 5
+\begin{DoxyCompactList}\small\item\em The max world Y value at which we can place props. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_a6c4d1fc6013f30d5e00769aa0f2a4102}\label{class_prop_grid_a6c4d1fc6013f30d5e00769aa0f2a4102} 
+bool {\bfseries allow\+Toggle\+Snap\+To\+Grid} = true
+\begin{DoxyCompactList}\small\item\em Allow the user to toggle snapping / precision placement? \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_grid_ae21c89b08fb06f1a09bd4d223e70a909}\label{class_prop_grid_ae21c89b08fb06f1a09bd4d223e70a909} 
+string {\bfseries default\+Grid} = "{}Default\+Interior"{}
+\begin{DoxyCompactList}\small\item\em The default \doxylink{class_prop_grid}{Prop\+Grid} to load. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_grid_a821f29d589059b6c3084b43852d941d7}\label{class_prop_grid_a821f29d589059b6c3084b43852d941d7} 
+static \mbox{\hyperlink{class_prop_grid}{Prop\+Grid}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Some handy code to make \doxylink{class_prop_grid}{Prop\+Grid} a Singleton, which means that only one \doxylink{class_prop_grid}{Prop\+Grid} script exists in the scene at a time. This will look for a \doxylink{class_prop_grid}{Prop\+Grid} script -\/ if there is one, it uses it as the instance. If not, it will throw a warning for you. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles information about the grid, storage and retrieval of props on the grid, and manipulation of props on the grid. Holds the grid object. 
+
+Is a Singleton. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prop_grid_ae79c918128cdc712c6f9497b00e15627}\index{PropGrid@{PropGrid}!CheckSnapHardcoded@{CheckSnapHardcoded}}
+\index{CheckSnapHardcoded@{CheckSnapHardcoded}!PropGrid@{PropGrid}}
+\doxysubsubsection{\texorpdfstring{CheckSnapHardcoded()}{CheckSnapHardcoded()}}
+{\footnotesize\ttfamily \label{class_prop_grid_ae79c918128cdc712c6f9497b00e15627} 
+void Prop\+Grid.\+Check\+Snap\+Hardcoded (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop}{Prop}}}]{prop}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If the \doxylink{class_prop}{Prop} has a set Cell Size, this will ensure snap\+To\+Grid is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_grid_a9b10206120ab90321618f8fc757bdcdd}\index{PropGrid@{PropGrid}!GetAllProps@{GetAllProps}}
+\index{GetAllProps@{GetAllProps}!PropGrid@{PropGrid}}
+\doxysubsubsection{\texorpdfstring{GetAllProps()}{GetAllProps()}}
+{\footnotesize\ttfamily \label{class_prop_grid_a9b10206120ab90321618f8fc757bdcdd} 
+static List$<$ \mbox{\hyperlink{class_prop}{Prop}} $>$ Prop\+Grid.\+Get\+All\+Props (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get all the props in the game. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_grid_adc54cb1ff8378b2d38226f8ff850ed80}\index{PropGrid@{PropGrid}!GetProp@{GetProp}}
+\index{GetProp@{GetProp}!PropGrid@{PropGrid}}
+\doxysubsubsection{\texorpdfstring{GetProp()}{GetProp()}}
+{\footnotesize\ttfamily \label{class_prop_grid_adc54cb1ff8378b2d38226f8ff850ed80} 
+static \mbox{\hyperlink{class_prop}{Prop}} Prop\+Grid.\+Get\+Prop (\begin{DoxyParamCaption}\item[{string}]{prop\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieve a given prop prefab from the list of all props by its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_grid_a7b6f63f773bb3acb3e10209b0237a21f}\index{PropGrid@{PropGrid}!MakeProp@{MakeProp}}
+\index{MakeProp@{MakeProp}!PropGrid@{PropGrid}}
+\doxysubsubsection{\texorpdfstring{MakeProp()}{MakeProp()}}
+{\footnotesize\ttfamily \label{class_prop_grid_a7b6f63f773bb3acb3e10209b0237a21f} 
+static Transform Prop\+Grid.\+Make\+Prop (\begin{DoxyParamCaption}\item[{Transform}]{prefab}{, }\item[{Vector3}]{position}{, }\item[{Quaternion}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Add a prop to the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefab} & \\
+\hline
+{\em position} & \\
+\hline
+{\em rotation} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_grid_af85acaac1a18d44ca48da301f0b504a9}\index{PropGrid@{PropGrid}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!PropGrid@{PropGrid}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily \label{class_prop_grid_af85acaac1a18d44ca48da301f0b504a9} 
+void Prop\+Grid.\+Rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop}{Prop}}}]{prop}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotate a given prop by a set number of degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/Prop\+Grid.\+cs\end{DoxyCompactItemize}

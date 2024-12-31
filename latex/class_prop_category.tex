@@ -1,0 +1,106 @@
+\doxysection{Prop\+Category Class Reference}
+\hypertarget{class_prop_category}{}\label{class_prop_category}\index{PropCategory@{PropCategory}}
+
+
+Defines a category of props and their associated rules. They support shared properties among different types of props. There are a few built-\/in categories, but you can also define your own.  
+
+
+Inheritance diagram for Prop\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_prop_category}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_prop_category_af680176e4b9b60aef1e2267c364c9874}{Can\+Overlap\+With}} (\mbox{\hyperlink{class_prop_category}{Prop\+Category}} other\+Category)
+\begin{DoxyCompactList}\small\item\em Can this prop overlap with the other prop? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_prop_category_af64f902b3d323b67480ccf2098c381c5}{Is\+Valid\+Surface}} (\mbox{\hyperlink{class_prop_category}{Prop\+Category}} surface\+Category)
+\begin{DoxyCompactList}\small\item\em Can this prop be placed on the given surface? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_category_af47bff41dc728d6eef4f89ef02918d1c}\label{class_prop_category_af47bff41dc728d6eef4f89ef02918d1c} 
+string {\bfseries category\+Name}
+\begin{DoxyCompactList}\small\item\em The name of the category. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_ac7a9728af99843cd4f73a0f3a7538eef}\label{class_prop_category_ac7a9728af99843cd4f73a0f3a7538eef} 
+Point\+And\+Click.\+Brush {\bfseries brush} = Point\+And\+Click.\+Brush.\+DISCRETE
+\begin{DoxyCompactList}\small\item\em The "{}\+Brush"{} used to paint this prop category. Effects how the user places the prop. Should usually be DISCRETE or CONTINUOUS. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_ab907e73f8d647f11368063f13520b3dd}\label{class_prop_category_ab907e73f8d647f11368063f13520b3dd} 
+List$<$ \mbox{\hyperlink{class_prop_category}{Prop\+Category}} $>$ {\bfseries surface\+Categories}
+\begin{DoxyCompactList}\small\item\em A list of categories on which props of this category can be placed. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_ade184cd4560330e903973b1d26dbcb55}\label{class_prop_category_ade184cd4560330e903973b1d26dbcb55} 
+List$<$ \mbox{\hyperlink{class_prop_category}{Prop\+Category}} $>$ {\bfseries replace\+Categories}
+\begin{DoxyCompactList}\small\item\em Props in this category get replaced with the current prop when selected. There should be no overlap with surface\+Categories. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_a4800e045da43f7805bd58d8a541e8c78}\label{class_prop_category_a4800e045da43f7805bd58d8a541e8c78} 
+List$<$ \mbox{\hyperlink{class_prop_category}{Prop\+Category}} $>$ {\bfseries overlap\+Categories}
+\begin{DoxyCompactList}\small\item\em A list of categories that can overlap with this one in the game world. It\textquotesingle{}s fine if this one is empty. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_ae3a2b2409413d360c9606380ffa1fdde}\label{class_prop_category_ae3a2b2409413d360c9606380ffa1fdde} 
+int {\bfseries rotate\+Increment} = 90
+\begin{DoxyCompactList}\small\item\em The amount in degrees to rotate the prop each request. Does nothing if can\+Be\+Rotated is false. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_aa95843ba8657b40ef49834c9b1bb27b1}\label{class_prop_category_aa95843ba8657b40ef49834c9b1bb27b1} 
+bool {\bfseries can\+Be\+Sold} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether props in this category can be sold. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_a6553bbcd193f74d7fa28ade80c38e8d0}\label{class_prop_category_a6553bbcd193f74d7fa28ade80c38e8d0} 
+bool {\bfseries can\+Be\+Deleted} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether props in this category can be deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_a4dfe0ae207867d1b9b61663cd58d52a6}\label{class_prop_category_a4dfe0ae207867d1b9b61663cd58d52a6} 
+bool {\bfseries can\+Be\+Selected} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether props in this category can be selected. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_a73c44fce45df0a16612d5c29350eefd0}\label{class_prop_category_a73c44fce45df0a16612d5c29350eefd0} 
+bool {\bfseries can\+Be\+Rotated} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether props in this category can be rotated. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_aa92063561f729e6e317d0ef83e117023}\label{class_prop_category_aa92063561f729e6e317d0ef83e117023} 
+bool {\bfseries allow\+Overlap} = false
+\begin{DoxyCompactList}\small\item\em Should this prop allow overlapping with other props? (i.\+e rug, flowers) Overrides overlap\+Categories and allows overlapping with all other prop categories. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_category_a7ea95030df646ccb45aa86721fa30893}\label{class_prop_category_a7ea95030df646ccb45aa86721fa30893} 
+Vector3 {\bfseries cell\+Size} = new Vector3(-\/1,-\/1,-\/1)
+\begin{DoxyCompactList}\small\item\em The minimum "{}grid size"{} this object can follow = defaults to this if the world grid is smaller. Useful for terrain or large objects. Ignore if negative. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a category of props and their associated rules. They support shared properties among different types of props. There are a few built-\/in categories, but you can also define your own. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prop_category_af680176e4b9b60aef1e2267c364c9874}\index{PropCategory@{PropCategory}!CanOverlapWith@{CanOverlapWith}}
+\index{CanOverlapWith@{CanOverlapWith}!PropCategory@{PropCategory}}
+\doxysubsubsection{\texorpdfstring{CanOverlapWith()}{CanOverlapWith()}}
+{\footnotesize\ttfamily \label{class_prop_category_af680176e4b9b60aef1e2267c364c9874} 
+bool Prop\+Category.\+Can\+Overlap\+With (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop_category}{Prop\+Category}}}]{other\+Category}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Can this prop overlap with the other prop? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+Category} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_category_af64f902b3d323b67480ccf2098c381c5}\index{PropCategory@{PropCategory}!IsValidSurface@{IsValidSurface}}
+\index{IsValidSurface@{IsValidSurface}!PropCategory@{PropCategory}}
+\doxysubsubsection{\texorpdfstring{IsValidSurface()}{IsValidSurface()}}
+{\footnotesize\ttfamily \label{class_prop_category_af64f902b3d323b67480ccf2098c381c5} 
+bool Prop\+Category.\+Is\+Valid\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop_category}{Prop\+Category}}}]{surface\+Category}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Can this prop be placed on the given surface? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface\+Category} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/Prop\+Category.\+cs\end{DoxyCompactItemize}

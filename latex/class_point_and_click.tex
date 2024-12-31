@@ -1,0 +1,169 @@
+\doxysection{Point\+And\+Click Class Reference}
+\hypertarget{class_point_and_click}{}\label{class_point_and_click}\index{PointAndClick@{PointAndClick}}
+
+
+Is a singleton -\/ only one should exist in a given scene.  
+
+
+Inheritance diagram for Point\+And\+Click\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_point_and_click}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_point_and_click_a1c41da3e9dec7470fd1bd3fcd50ef24a}\label{class_point_and_click_a1c41da3e9dec7470fd1bd3fcd50ef24a} 
+enum {\bfseries Build\+State} \{ \newline
+{\bfseries PLACE}
+, {\bfseries SELECT}
+, {\bfseries DELETE}
+, {\bfseries REPLACE}
+, \newline
+{\bfseries SELL}
+, {\bfseries PAINT}
+, {\bfseries NONE}
+ \}
+\item 
+\Hypertarget{class_point_and_click_a65f299654747787e8b06b57fa2e384dd}\label{class_point_and_click_a65f299654747787e8b06b57fa2e384dd} 
+enum {\bfseries Brush} \{ {\bfseries CONTINUOUS}
+, {\bfseries DISCRETE}
+, {\bfseries MOVE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_point_and_click_ad0ec3700ee2f0fdfd0d5e693b4fe3300}\label{class_point_and_click_ad0ec3700ee2f0fdfd0d5e693b4fe3300} 
+void {\bfseries Cancel} ()
+\begin{DoxyCompactList}\small\item\em Cancels the placement of the prop before finishing the operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_and_click_ad61f191343fc3d3c695c750078562082}{Lock\+Height}} (float height, bool locked=true)
+\begin{DoxyCompactList}\small\item\em Locks the height to a specific Y cell. Only works for continuous placement. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_a635b99f79a52771a9f965ae008bae13f}\label{class_point_and_click_a635b99f79a52771a9f965ae008bae13f} 
+void {\bfseries Set\+Brush\+Discrete} ()
+\begin{DoxyCompactList}\small\item\em Sets the discrete brush. Called from Inspector. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_a74c13ff74365b40017bba7581d66a3d0}\label{class_point_and_click_a74c13ff74365b40017bba7581d66a3d0} 
+void {\bfseries Set\+Brush\+Continuous} ()
+\begin{DoxyCompactList}\small\item\em Sets the continuous brush. Called from Inspector. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_ae70ebd22eee91b30ee88c3e2971f9ddd}\label{class_point_and_click_ae70ebd22eee91b30ee88c3e2971f9ddd} 
+void {\bfseries Set\+Brush} (Brush brush)
+\begin{DoxyCompactList}\small\item\em Set the brush to determine how objects are placed. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_a4eabf77af270b12212ce1f93806c58fc}\label{class_point_and_click_a4eabf77af270b12212ce1f93806c58fc} 
+void {\bfseries Set\+Prop\+Prefab} (\mbox{\hyperlink{class_prop}{Prop}} prop)
+\begin{DoxyCompactList}\small\item\em Set the prop to place and create. Enable hover object for previewing placement. This will create a new prop unless the action is cancelled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_point_and_click_a97fd298e520aaee5fc0078be0cbd5a60}{Select\+Prop}} (\mbox{\hyperlink{class_prop}{Prop}} prop, bool hover=false)
+\begin{DoxyCompactList}\small\item\em Select a prop that is already placed and allow the player to move it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_and_click_a987d55472fe67e704f682f51e270f83d}{Set\+Build\+State}} (Build\+State state)
+\begin{DoxyCompactList}\small\item\em Set the build state. Can be called to change how a prop is manipulated. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_a97645898879c6a0f00e2dca8327bb969}\label{class_point_and_click_a97645898879c6a0f00e2dca8327bb969} 
+void {\bfseries Set\+Build\+State\+Delete} ()
+\begin{DoxyCompactList}\small\item\em Sets the build state to delete so objects will be deleted on click. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_a27983683cc8a23924af0d0b951c8f802}\label{class_point_and_click_a27983683cc8a23924af0d0b951c8f802} 
+void {\bfseries Set\+Build\+State\+Select} ()
+\begin{DoxyCompactList}\small\item\em Sets the build state to "{}select"{}. Nothing is placed, and objects can be selected. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_ae9f0d313a9ba3e3431e1af0eb5113044}\label{class_point_and_click_ae9f0d313a9ba3e3431e1af0eb5113044} 
+void {\bfseries Set\+Build\+State\+Paint} ()
+\begin{DoxyCompactList}\small\item\em Sets the build state to "{}paint"{}. \end{DoxyCompactList}\item 
+\Hypertarget{class_point_and_click_ac2b25d0f99d0b5556e0f137bc6ed8435}\label{class_point_and_click_ac2b25d0f99d0b5556e0f137bc6ed8435} 
+void {\bfseries Set\+Build\+State\+None} ()
+\begin{DoxyCompactList}\small\item\em Sets the build state to NONE -\/ no building will occur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_point_and_click_a4df91a996cadabc15b074c8f2b7c97b3}\label{class_point_and_click_a4df91a996cadabc15b074c8f2b7c97b3} 
+static \mbox{\hyperlink{class_prop}{Prop}} {\bfseries Get\+Selected\+Prop} ()
+\item 
+\Hypertarget{class_point_and_click_a70b1aa3089fc3c1bf8f96039f0169f4e}\label{class_point_and_click_a70b1aa3089fc3c1bf8f96039f0169f4e} 
+static bool {\bfseries Is\+Selected\+Prop} (\mbox{\hyperlink{class_prop}{Prop}} prop)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_point_and_click_ab3aef93e7b20c11ca3d0ee3e3b670cf4}\label{class_point_and_click_ab3aef93e7b20c11ca3d0ee3e3b670cf4} 
+Transform {\bfseries cursor\+Prefab}
+\item 
+\Hypertarget{class_point_and_click_acd4c0ae0dbe4aff015cdb5119b24ee7d}\label{class_point_and_click_acd4c0ae0dbe4aff015cdb5119b24ee7d} 
+Transform {\bfseries selection\+Shadow\+Prefab}
+\item 
+\Hypertarget{class_point_and_click_a508780a4ac08722bf3f4c9d96331e9eb}\label{class_point_and_click_a508780a4ac08722bf3f4c9d96331e9eb} 
+Audio\+Clip {\bfseries pickup\+Noise}
+\item 
+\Hypertarget{class_point_and_click_a4e8227e3a9328075b0b2f675ad46e2b5}\label{class_point_and_click_a4e8227e3a9328075b0b2f675ad46e2b5} 
+Build\+State {\bfseries build\+State} = Build\+State.\+SELECT
+\item 
+\Hypertarget{class_point_and_click_a764af970afb832d4bcd0cba194746982}\label{class_point_and_click_a764af970afb832d4bcd0cba194746982} 
+\mbox{\hyperlink{class_prop}{Prop}} {\bfseries selected\+Prop}
+\item 
+\Hypertarget{class_point_and_click_aa0b6c1ded1f70d4028fa03023ad415b4}\label{class_point_and_click_aa0b6c1ded1f70d4028fa03023ad415b4} 
+\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Prop\+Paint.\+Paint}} {\bfseries paint}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_point_and_click_a10ddc7b01802304fd4e4e4df1ea77343}\label{class_point_and_click_a10ddc7b01802304fd4e4e4df1ea77343} 
+static \mbox{\hyperlink{class_point_and_click}{Point\+And\+Click}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Is a singleton -\/ only one should exist in a given scene. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_point_and_click_ad61f191343fc3d3c695c750078562082}\index{PointAndClick@{PointAndClick}!LockHeight@{LockHeight}}
+\index{LockHeight@{LockHeight}!PointAndClick@{PointAndClick}}
+\doxysubsubsection{\texorpdfstring{LockHeight()}{LockHeight()}}
+{\footnotesize\ttfamily \label{class_point_and_click_ad61f191343fc3d3c695c750078562082} 
+void Point\+And\+Click.\+Lock\+Height (\begin{DoxyParamCaption}\item[{float}]{height}{, }\item[{bool}]{locked}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Locks the height to a specific Y cell. Only works for continuous placement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & \\
+\hline
+{\em locked} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_and_click_a97fd298e520aaee5fc0078be0cbd5a60}\index{PointAndClick@{PointAndClick}!SelectProp@{SelectProp}}
+\index{SelectProp@{SelectProp}!PointAndClick@{PointAndClick}}
+\doxysubsubsection{\texorpdfstring{SelectProp()}{SelectProp()}}
+{\footnotesize\ttfamily \label{class_point_and_click_a97fd298e520aaee5fc0078be0cbd5a60} 
+bool Point\+And\+Click.\+Select\+Prop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prop}{Prop}}}]{prop}{, }\item[{bool}]{hover}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Select a prop that is already placed and allow the player to move it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & \\
+\hline
+{\em hover} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Successful selection.
+\end{DoxyReturn}
+\Hypertarget{class_point_and_click_a987d55472fe67e704f682f51e270f83d}\index{PointAndClick@{PointAndClick}!SetBuildState@{SetBuildState}}
+\index{SetBuildState@{SetBuildState}!PointAndClick@{PointAndClick}}
+\doxysubsubsection{\texorpdfstring{SetBuildState()}{SetBuildState()}}
+{\footnotesize\ttfamily \label{class_point_and_click_a987d55472fe67e704f682f51e270f83d} 
+void Point\+And\+Click.\+Set\+Build\+State (\begin{DoxyParamCaption}\item[{Build\+State}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the build state. Can be called to change how a prop is manipulated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/Point\+And\+Click.\+cs\end{DoxyCompactItemize}

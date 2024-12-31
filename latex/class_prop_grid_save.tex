@@ -1,0 +1,99 @@
+\doxysection{Prop\+Grid\+Save Class Reference}
+\hypertarget{class_prop_grid_save}{}\label{class_prop_grid_save}\index{PropGridSave@{PropGridSave}}
+
+
+Saves information props and the \doxylink{class_prop_grid}{Prop\+Grid}.  
+
+
+Inheritance diagram for Prop\+Grid\+Save\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_prop_grid_save}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_prop_grid_save_a7d47fddc35bbc05d29ede129e40a62ab}{Save\+Prop\+Grid}} (string grid\+Name)
+\begin{DoxyCompactList}\small\item\em Save the current grid as a \doxylink{class_prop_grid}{Prop\+Grid} with the provided name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_grid_save_a12fc5866b4d2d5e6b4d58c0e066548be}{Load\+Prop\+Grid}} (string grid\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieve and load a \doxylink{class_prop}{Prop} Grid by its name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_grid_save_a2b64a9d91e02f45b0458ac7cfb624df9}{Add\+New\+Prop\+Grid}} (string new\+Grid\+Name)
+\begin{DoxyCompactList}\small\item\em Add a new, empty prop grid to the save file. \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{class_prop_grid_save_a1601c96a7c4b4589bff6b5069fc8ef55}{Get\+Prop\+Grid\+Names}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve a list of all \doxylink{class_prop}{Prop} Grids in the savefile by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_grid_save_a5c4a56bbcd421484a735dd04986b5ee6}\label{class_prop_grid_save_a5c4a56bbcd421484a735dd04986b5ee6} 
+string {\bfseries selected\+Grid\+Name}
+\begin{DoxyCompactList}\small\item\em The name of the grid being modified. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Saves information props and the \doxylink{class_prop_grid}{Prop\+Grid}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prop_grid_save_a2b64a9d91e02f45b0458ac7cfb624df9}\index{PropGridSave@{PropGridSave}!AddNewPropGrid@{AddNewPropGrid}}
+\index{AddNewPropGrid@{AddNewPropGrid}!PropGridSave@{PropGridSave}}
+\doxysubsubsection{\texorpdfstring{AddNewPropGrid()}{AddNewPropGrid()}}
+{\footnotesize\ttfamily \label{class_prop_grid_save_a2b64a9d91e02f45b0458ac7cfb624df9} 
+void Prop\+Grid\+Save.\+Add\+New\+Prop\+Grid (\begin{DoxyParamCaption}\item[{string}]{new\+Grid\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a new, empty prop grid to the save file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Grid\+Name} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_grid_save_a1601c96a7c4b4589bff6b5069fc8ef55}\index{PropGridSave@{PropGridSave}!GetPropGridNames@{GetPropGridNames}}
+\index{GetPropGridNames@{GetPropGridNames}!PropGridSave@{PropGridSave}}
+\doxysubsubsection{\texorpdfstring{GetPropGridNames()}{GetPropGridNames()}}
+{\footnotesize\ttfamily \label{class_prop_grid_save_a1601c96a7c4b4589bff6b5069fc8ef55} 
+List$<$ string $>$ Prop\+Grid\+Save.\+Get\+Prop\+Grid\+Names (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve a list of all \doxylink{class_prop}{Prop} Grids in the savefile by name. 
+
+\begin{DoxyReturn}{Returns}
+A List of string objects representing grid names.
+\end{DoxyReturn}
+\Hypertarget{class_prop_grid_save_a12fc5866b4d2d5e6b4d58c0e066548be}\index{PropGridSave@{PropGridSave}!LoadPropGrid@{LoadPropGrid}}
+\index{LoadPropGrid@{LoadPropGrid}!PropGridSave@{PropGridSave}}
+\doxysubsubsection{\texorpdfstring{LoadPropGrid()}{LoadPropGrid()}}
+{\footnotesize\ttfamily \label{class_prop_grid_save_a12fc5866b4d2d5e6b4d58c0e066548be} 
+void Prop\+Grid\+Save.\+Load\+Prop\+Grid (\begin{DoxyParamCaption}\item[{string}]{grid\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve and load a \doxylink{class_prop}{Prop} Grid by its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid\+Name} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_grid_save_a7d47fddc35bbc05d29ede129e40a62ab}\index{PropGridSave@{PropGridSave}!SavePropGrid@{SavePropGrid}}
+\index{SavePropGrid@{SavePropGrid}!PropGridSave@{PropGridSave}}
+\doxysubsubsection{\texorpdfstring{SavePropGrid()}{SavePropGrid()}}
+{\footnotesize\ttfamily \label{class_prop_grid_save_a7d47fddc35bbc05d29ede129e40a62ab} 
+void Prop\+Grid\+Save.\+Save\+Prop\+Grid (\begin{DoxyParamCaption}\item[{string}]{grid\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save the current grid as a \doxylink{class_prop_grid}{Prop\+Grid} with the provided name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/Prop\+Grid\+Save.\+cs\end{DoxyCompactItemize}

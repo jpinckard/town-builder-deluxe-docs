@@ -1,0 +1,327 @@
+\doxysection{Prop Class Reference}
+\hypertarget{class_prop}{}\label{class_prop}\index{Prop@{Prop}}
+
+
+Defines the data and behavior of a \doxylink{class_prop}{Prop} object.  
+
+
+Inheritance diagram for Prop\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_prop}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_prop_a6915e57bb02acf43715f33a9b590828a}{On\+Button\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Called when a button associated with this prop is clicked. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_prop_a64800f68fcfdc17326ca34317078ad63}{Get\+Cell\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the cell size on the grid for this prop\textquotesingle{}s prop\+Category. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_prop_a42dbdd4cfc942cf2294031216a3be00c}{Get\+Grid\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets my position on the grid. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_prop_a089303a6193078bf25b6fb8450860247}{Get\+Pivot}} ()
+\begin{DoxyCompactList}\small\item\em Gets the position this prop pivots around. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_prop_a8e5d885d3b8ad34ece997bb4069415a7}{Get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of this \doxylink{class_prop}{Prop}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_prop_a0f72c54734e9b77bf5a98d24fa0a1efb}{Bounds}} \mbox{\hyperlink{class_prop_a8a9cb452116ff974b53404386363671f}{Get\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Get the world bounds of this prop. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a8de0385af6e2b1fa4c1b6a99232a9180}\label{class_prop_a8de0385af6e2b1fa4c1b6a99232a9180} 
+Collider {\bfseries Get\+Collider} ()
+\begin{DoxyCompactList}\small\item\em Gets the prop\textquotesingle{}s collider. This collider is used specifically for point and click. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_prop_a5a8684fa9861a9d05f5214c56d45bfab}{Is\+Valid\+Placement}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the prop can be placed in the position it\textquotesingle{}s currently in. Otherwise, return false. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_ae68c42706a1ffd63214e1d3e895ec79f}\label{class_prop_ae68c42706a1ffd63214e1d3e895ec79f} 
+void {\bfseries End\+Material\+Effect} ()
+\item 
+\Hypertarget{class_prop_a4c49fe8f1835e558db0bb7fe1f7148c8}\label{class_prop_a4c49fe8f1835e558db0bb7fe1f7148c8} 
+void {\bfseries Disable\+Tiling} ()
+\begin{DoxyCompactList}\small\item\em Turn off tiling. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a38210dcc9056bc7fcc74b3187da2b75b}\label{class_prop_a38210dcc9056bc7fcc74b3187da2b75b} 
+void {\bfseries Place\+Effect} (Audio\+Source audio\+Source)
+\begin{DoxyCompactList}\small\item\em Effects to occur when the prop is placed. Purely aesthetic. Customize this one however you like! Maybe add some particles or a cute animation... \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a3a250deb8ff665e3eb11c0867be02ff3}\label{class_prop_a3a250deb8ff665e3eb11c0867be02ff3} 
+void {\bfseries Toggle\+Collider} (bool toggle)
+\begin{DoxyCompactList}\small\item\em Sets the collider on the prop on or off, ensuring that raycasts won\textquotesingle{}t hit prop that are already selected. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a9bdcc7d021ac42e57ec9ed193adb98bc}\label{class_prop_a9bdcc7d021ac42e57ec9ed193adb98bc} 
+void {\bfseries Delete} (bool check\+Valid=true)
+\begin{DoxyCompactList}\small\item\em Cleans up a prop before destroying it. Handles stopping tiling, etc. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_prop_a6534dfa950d666dccca0078297a169d4}{Has\+Props\+On\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Are there props "{}on top"{} of this prop? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_prop_aa729fc36edf67a3e835b43b1d0d18f1f}{Is\+Fully\+Supported}} ()
+\begin{DoxyCompactList}\small\item\em Is this prop on top of a valid surface at all points along its bottom? \end{DoxyCompactList}\item 
+Dictionary$<$ Vector3, \mbox{\hyperlink{class_prop}{Prop}} $>$ \mbox{\hyperlink{class_prop_a59e03f508c274bcf91a5e089d4d18451}{Get\+Connected\+Edges}} ()
+\begin{DoxyCompactList}\small\item\em Get all Props connected to this \doxylink{class_prop}{Prop} in cells at the eight cardinal directions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prop_ad755ea9829558c778ecc9a2e941ec75c}{Add\+Paint}} (\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Prop\+Paint.\+Paint}} paint)
+\begin{DoxyCompactList}\small\item\em Adds a paint to the list of paints associated with this prop. Only one paint per category is allowed. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a3ffb519ec2d9eef4bd67ef50f0e1f61b}\label{class_prop_a3ffb519ec2d9eef4bd67ef50f0e1f61b} 
+void {\bfseries Initialize\+Paint} ()
+\begin{DoxyCompactList}\small\item\em Applies all paint associated with this \doxylink{class_prop}{Prop}. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{struct_prop_paint_1_1_paint}{Prop\+Paint.\+Paint}} $>$ \mbox{\hyperlink{class_prop_a64ae7ef09b462754dfcff45770174917}{Get\+Paints}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve all paints associated with this prop. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a0431577f4e8425c2eef2284ecda76155}\label{class_prop_a0431577f4e8425c2eef2284ecda76155} 
+void {\bfseries Set\+Paints} (List$<$ \mbox{\hyperlink{struct_prop_paint_1_1_paint}{Prop\+Paint.\+Paint}} $>$ paints)
+\begin{DoxyCompactList}\small\item\em Set all paints for this prop and initialize. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_a22fcb7168b8967e986c3636dc8bfb9e6}\label{class_prop_a22fcb7168b8967e986c3636dc8bfb9e6} 
+Sprite {\bfseries icon}
+\begin{DoxyCompactList}\small\item\em The display icon of the prop in the UI. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a13b99d49f547f5a67461c08b3ce614a3}\label{class_prop_a13b99d49f547f5a67461c08b3ce614a3} 
+int {\bfseries price}
+\begin{DoxyCompactList}\small\item\em The price of the prop. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_aa8dbe43583b50de7778e41a300a8ebe1}\label{class_prop_aa8dbe43583b50de7778e41a300a8ebe1} 
+string {\bfseries prop\+Name}
+\begin{DoxyCompactList}\small\item\em The name of the prop. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a46d3077f9c3e6853d2d940f994ed2d0b}\label{class_prop_a46d3077f9c3e6853d2d940f994ed2d0b} 
+List$<$ string $>$ {\bfseries prop\+Tags}
+\begin{DoxyCompactList}\small\item\em One or more tags indicating the variety of prop. Example\+: ground, furniture, house, hanging. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_ab07cb5f20efedf3da11b53a2fd2dd99f}\label{class_prop_ab07cb5f20efedf3da11b53a2fd2dd99f} 
+string {\bfseries description}
+\begin{DoxyCompactList}\small\item\em A brief description of the prop. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a8e112982e9643faf012428fe99f797f6}\label{class_prop_a8e112982e9643faf012428fe99f797f6} 
+\mbox{\hyperlink{class_prop_category}{Prop\+Category}} {\bfseries category}
+\begin{DoxyCompactList}\small\item\em The category to which this prop belongs. \end{DoxyCompactList}\item 
+\Hypertarget{class_prop_a6eb85da4073562943b673a2b5eaa8c0c}\label{class_prop_a6eb85da4073562943b673a2b5eaa8c0c} 
+Audio\+Clip {\bfseries place\+Sound}
+\begin{DoxyCompactList}\small\item\em The sound to play when this prop is placed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prop_a0f72c54734e9b77bf5a98d24fa0a1efb}\label{class_prop_a0f72c54734e9b77bf5a98d24fa0a1efb} 
+Bounds {\bfseries Bounds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A property that calculates and returns the bounds whenever accessed. \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{class_prop_ab3ad9cf548e33e323f4fcb57cd113458}{Display\+Tags}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the tag of the prop. Returns the first tag from the list of tags, or "{}\+Untagged"{} if no tags are assigned. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_prop_a90190204ea267767b7060a88db26e725}{Display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the name of the prop. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_prop_a8cc6d1b213cf776a496c4897da6933f7}{Display\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Sprite \mbox{\hyperlink{class_prop_aaa943c026218aaf08cbf55c5dca04f6a}{Display\+Icon}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the icon associated with the prop. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the data and behavior of a \doxylink{class_prop}{Prop} object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prop_ad755ea9829558c778ecc9a2e941ec75c}\index{Prop@{Prop}!AddPaint@{AddPaint}}
+\index{AddPaint@{AddPaint}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{AddPaint()}{AddPaint()}}
+{\footnotesize\ttfamily \label{class_prop_ad755ea9829558c778ecc9a2e941ec75c} 
+void Prop.\+Add\+Paint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_prop_paint_1_1_paint}{Prop\+Paint.\+Paint}}}]{paint}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a paint to the list of paints associated with this prop. Only one paint per category is allowed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paint} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prop_a8a9cb452116ff974b53404386363671f}\index{Prop@{Prop}!GetBounds@{GetBounds}}
+\index{GetBounds@{GetBounds}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{GetBounds()}{GetBounds()}}
+{\footnotesize\ttfamily \label{class_prop_a8a9cb452116ff974b53404386363671f} 
+\mbox{\hyperlink{class_prop_a0f72c54734e9b77bf5a98d24fa0a1efb}{Bounds}} Prop.\+Get\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the world bounds of this prop. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a64800f68fcfdc17326ca34317078ad63}\index{Prop@{Prop}!GetCellSize@{GetCellSize}}
+\index{GetCellSize@{GetCellSize}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{GetCellSize()}{GetCellSize()}}
+{\footnotesize\ttfamily \label{class_prop_a64800f68fcfdc17326ca34317078ad63} 
+Vector3 Prop.\+Get\+Cell\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the cell size on the grid for this prop\textquotesingle{}s prop\+Category. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a59e03f508c274bcf91a5e089d4d18451}\index{Prop@{Prop}!GetConnectedEdges@{GetConnectedEdges}}
+\index{GetConnectedEdges@{GetConnectedEdges}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{GetConnectedEdges()}{GetConnectedEdges()}}
+{\footnotesize\ttfamily \label{class_prop_a59e03f508c274bcf91a5e089d4d18451} 
+Dictionary$<$ Vector3, \mbox{\hyperlink{class_prop}{Prop}} $>$ Prop.\+Get\+Connected\+Edges (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all Props connected to this \doxylink{class_prop}{Prop} in cells at the eight cardinal directions. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a42dbdd4cfc942cf2294031216a3be00c}\index{Prop@{Prop}!GetGridPosition@{GetGridPosition}}
+\index{GetGridPosition@{GetGridPosition}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{GetGridPosition()}{GetGridPosition()}}
+{\footnotesize\ttfamily \label{class_prop_a42dbdd4cfc942cf2294031216a3be00c} 
+Vector3 Prop.\+Get\+Grid\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets my position on the grid. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a64ae7ef09b462754dfcff45770174917}\index{Prop@{Prop}!GetPaints@{GetPaints}}
+\index{GetPaints@{GetPaints}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{GetPaints()}{GetPaints()}}
+{\footnotesize\ttfamily \label{class_prop_a64ae7ef09b462754dfcff45770174917} 
+List$<$ \mbox{\hyperlink{struct_prop_paint_1_1_paint}{Prop\+Paint.\+Paint}} $>$ Prop.\+Get\+Paints (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve all paints associated with this prop. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a089303a6193078bf25b6fb8450860247}\index{Prop@{Prop}!GetPivot@{GetPivot}}
+\index{GetPivot@{GetPivot}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{GetPivot()}{GetPivot()}}
+{\footnotesize\ttfamily \label{class_prop_a089303a6193078bf25b6fb8450860247} 
+Vector3 Prop.\+Get\+Pivot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the position this prop pivots around. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a8e5d885d3b8ad34ece997bb4069415a7}\index{Prop@{Prop}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \label{class_prop_a8e5d885d3b8ad34ece997bb4069415a7} 
+Vector3 Prop.\+Get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size of this \doxylink{class_prop}{Prop}. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a6534dfa950d666dccca0078297a169d4}\index{Prop@{Prop}!HasPropsOnTop@{HasPropsOnTop}}
+\index{HasPropsOnTop@{HasPropsOnTop}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{HasPropsOnTop()}{HasPropsOnTop()}}
+{\footnotesize\ttfamily \label{class_prop_a6534dfa950d666dccca0078297a169d4} 
+bool Prop.\+Has\+Props\+On\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Are there props "{}on top"{} of this prop? 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_aa729fc36edf67a3e835b43b1d0d18f1f}\index{Prop@{Prop}!IsFullySupported@{IsFullySupported}}
+\index{IsFullySupported@{IsFullySupported}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{IsFullySupported()}{IsFullySupported()}}
+{\footnotesize\ttfamily \label{class_prop_aa729fc36edf67a3e835b43b1d0d18f1f} 
+bool Prop.\+Is\+Fully\+Supported (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Is this prop on top of a valid surface at all points along its bottom? 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_prop_a5a8684fa9861a9d05f5214c56d45bfab}\index{Prop@{Prop}!IsValidPlacement@{IsValidPlacement}}
+\index{IsValidPlacement@{IsValidPlacement}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{IsValidPlacement()}{IsValidPlacement()}}
+{\footnotesize\ttfamily \label{class_prop_a5a8684fa9861a9d05f5214c56d45bfab} 
+bool Prop.\+Is\+Valid\+Placement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the prop can be placed in the position it\textquotesingle{}s currently in. Otherwise, return false. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_prop_a6915e57bb02acf43715f33a9b590828a}\index{Prop@{Prop}!OnButtonClick@{OnButtonClick}}
+\index{OnButtonClick@{OnButtonClick}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{OnButtonClick()}{OnButtonClick()}}
+{\footnotesize\ttfamily \label{class_prop_a6915e57bb02acf43715f33a9b590828a} 
+void Prop.\+On\+Button\+Click (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called when a button associated with this prop is clicked. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_prop_a8cc6d1b213cf776a496c4897da6933f7}\index{Prop@{Prop}!DisplayColor@{DisplayColor}}
+\index{DisplayColor@{DisplayColor}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{DisplayColor}{DisplayColor}}
+{\footnotesize\ttfamily \label{class_prop_a8cc6d1b213cf776a496c4897da6933f7} 
+Color Prop.\+Display\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}}.
+
+\Hypertarget{class_prop_aaa943c026218aaf08cbf55c5dca04f6a}\index{Prop@{Prop}!DisplayIcon@{DisplayIcon}}
+\index{DisplayIcon@{DisplayIcon}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{DisplayIcon}{DisplayIcon}}
+{\footnotesize\ttfamily \label{class_prop_aaa943c026218aaf08cbf55c5dca04f6a} 
+Sprite Prop.\+Display\+Icon\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the icon associated with the prop. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}}.
+
+\Hypertarget{class_prop_a90190204ea267767b7060a88db26e725}\index{Prop@{Prop}!DisplayName@{DisplayName}}
+\index{DisplayName@{DisplayName}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{DisplayName}{DisplayName}}
+{\footnotesize\ttfamily \label{class_prop_a90190204ea267767b7060a88db26e725} 
+string Prop.\+Display\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the name of the prop. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}}.
+
+\Hypertarget{class_prop_ab3ad9cf548e33e323f4fcb57cd113458}\index{Prop@{Prop}!DisplayTags@{DisplayTags}}
+\index{DisplayTags@{DisplayTags}!Prop@{Prop}}
+\doxysubsubsection{\texorpdfstring{DisplayTags}{DisplayTags}}
+{\footnotesize\ttfamily \label{class_prop_ab3ad9cf548e33e323f4fcb57cd113458} 
+List$<$string$>$ Prop.\+Display\+Tags\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the tag of the prop. Returns the first tag from the list of tags, or "{}\+Untagged"{} if no tags are assigned. Used in interface \doxylink{interface_i_display_data}{IDisplay\+Data}. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_display_data}{IDisplay\+Data}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joypi/\+Documents/\+Unity Games/\+Pet\+Sim/\+Assets/\+Scripts/Prop.\+cs\end{DoxyCompactItemize}
